@@ -1,8 +1,8 @@
 (ns twilio.core
-  (:use [clojure.contrib.prxml :only [prxml]]))
+  (:require [hiccup.core :refer [html]]
+            [hiccup.page :refer [xml-declaration]]))
 
 (defmacro twiml-response [& verbs]
-  `(with-out-str
-     (prxml
-      [:decl! {:version "1.1"}]
-      [:Response ~@verbs])))
+  `(str
+     (xml-declaration "utf-8")
+     (html [:Response ~@verbs])))

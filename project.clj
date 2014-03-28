@@ -1,7 +1,7 @@
-(defproject clj-twilio "0.2.0"
+(defproject clj-twilio "0.2.1"
   :description "Clojure Twilio API"
-  :dependencies [[org.clojure/clojure "1.2.0"]
-                 [org.clojure/clojure-contrib "1.2.0"]]
+  :dependencies [[org.clojure/clojure "1.6.0"]
+                 [hiccup "1.0.3"]]
   :dev-dependencies [[lein-clojars "0.5.0"]
                      [swank-clojure "1.2.1"]]
   :aot [twilio.core
